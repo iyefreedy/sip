@@ -40,12 +40,17 @@ $routes->get('/', 'Home::index');
 $routes->group('product', function ($routes) {
     $routes->get('', 'ProductController::index');
     $routes->get('create', 'ProductController::create');
+    $routes->post('insert', 'ProductController::insert');
+    $routes->get('order', 'ProductController::order');
+    $routes->post('insert-order', 'ProductController::insertOrder');
+    $routes->get('delete/(:segment)', 'ProductController::delete/$1');
 });
 
 $routes->group('supplier', function ($routes) {
     $routes->get('', 'SupplierController::index');
     $routes->get('create', 'SupplierController::create');
     $routes->post('insert', 'SupplierController::insert');
+    $routes->get('delete/(:segment)', 'SupplierController::delete/$1');
 });
 
 /*

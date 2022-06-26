@@ -11,21 +11,36 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Address</th>
+                        <th>Nama</th>
+                        <th>Harga Jual (Rp.)</th>
+                        <th>Harga Beli (Rp.)</th>
+                        <th>Supplier</th>
+                        <th>Kuantitas</th>
+                        <th>Berat</th>
+                        <th>Isi</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Name</th>
-                        <th>Address</th>
+                        <th>Nama</th>
+                        <th>Harga Jual (Rp.)</th>
+                        <th>Harga Beli (Rp.)</th>
+                        <th>Supplier</th>
+                        <th>Kuantitas</th>
+                        <th>Berat</th>
+                        <th>Isi</th>
                     </tr>
                 </tfoot>
                 <tbody>
-                    <?php foreach ($suppliers as $supplier) : ?>
+                    <?php foreach ($products as $product) : ?>
                         <tr>
-                            <td><?= $supplier['name'] ?></td>
-                            <td><?= $supplier['address'] ?></td>
+                            <td><?= $product['name'] ?></td>
+                            <td><?= $product['selling_price'] ?></td>
+                            <td><?= $product['buying_price'] ?></td>
+                            <td><?= $product['supplier_name'] ?></td>
+                            <td><?= $product['quantity'] ?></td>
+                            <td><?= $product['weight'] ?></td>
+                            <td><?= $product['volume'] ?></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

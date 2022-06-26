@@ -26,6 +26,12 @@
         Interface
     </div> -->
 
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url() ?>/product/order">
+            <i class="fas fa-cart-arrow-down"></i>
+            <span>Order Produk</span></a>
+    </li>
+
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct">
@@ -44,7 +50,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="true" aria-controls="collapseSupplier">
-            <i class="fas fa-fw fa-bread-slice"></i>
+            <i class="fas fa-fw fa-parachute-box"></i>
             <span>Suppliers</span>
         </a>
         <div id="collapseSupplier" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">

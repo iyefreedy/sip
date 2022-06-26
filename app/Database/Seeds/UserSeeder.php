@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
         $user->username = "admin";
         $user->email = "iye.fredickson@gmail.com";
         $user->setPassword("admin");
-        $user->is_active = 1;
+        $user->active = 1;
 
         $usermodel = new UserModel();
         $usermodel->save($user);

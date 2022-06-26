@@ -42,6 +42,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    <?= view('Myth\Auth\Views\_message_block') ?>
                     <?= $this->renderSection('content') ?>
                 </div>
                 <!-- /.container-fluid -->
@@ -83,7 +84,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="<?= route_to('logout') ?>">Logout</a>
                 </div>
             </div>
         </div>

@@ -42,4 +42,14 @@ class SupplierController extends BaseController
 
         return redirect()->to('supplier')->with('message', 'Success to save data');
     }
+
+    public function delete($id)
+    {
+        $supplierModel = new SupplierModel();
+        if (!$supplierModel->delete($id)) {
+            return redirect()->back()->with('error', 'Failed to delete supplier');
+        }
+
+        return redirect()->back()->with('message', 'Sucess delete supplier');
+    }
 }

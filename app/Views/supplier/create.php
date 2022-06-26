@@ -2,7 +2,6 @@
 <?= $this->section('content') ?>
 <h1 class="h3 mb-3 text-gray-800">Tambah Data Supplier</h1>
 
-<?= view('Myth\Auth\Views\_message_block') ?>
 <div class="card">
     <div class="card-body">
         <form action="<?= route_to('supplier/insert') ?>" method="POST">

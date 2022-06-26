@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProductModel extends Model
+class OrderModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'products';
+    protected $table            = 'orders';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['supplier_id', 'name', 'selling_price', 'buying_price', 'weight', 'volume',  'quantity', 'description', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields    = ['product_id', 'price', 'quantity', 'deleted_at', 'created_at', 'updated_at'];
 
     // Dates
     protected $useTimestamps = true;
@@ -39,9 +39,4 @@ class ProductModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function supplier()
-    {
-        return $this->select('products.*, suppliers.name AS supplier_name')->join('suppliers', 'products.supplier_id=suppliers.id');
-    }
 }
